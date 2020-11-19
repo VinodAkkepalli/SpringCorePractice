@@ -1,3 +1,5 @@
+package com.practice.spring;
+
 import com.practice.spring.shapes.Point;
 
 import java.util.List;

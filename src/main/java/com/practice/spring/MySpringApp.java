@@ -1,3 +1,5 @@
+package com.practice.spring;
+
 import com.practice.spring.shapes.Circle;
 import com.practice.spring.shapes.LineSegment;
 import com.practice.spring.shapes.Point;
