@@ -42,4 +42,9 @@ public class Point {
     public void setY(float y) {
         this.y = y;
     }
+
+	@Override
+	public String toString() {
+		return "Point [x=" + x + ", y=" + y + "]";
+	}
 }

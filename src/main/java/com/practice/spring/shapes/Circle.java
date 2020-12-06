@@ -57,4 +57,8 @@ public class Circle {
                 "center=" + center +
                 '}';
     }
+
+	public void aopDemoMethod() {
+		System.out.println("aopDemoMethod()");
+	}
 }

@@ -18,8 +18,8 @@ import java.util.Locale;
 public class MySpringApp {
     public static void main(String[] args) {
 
-        annotationBasedConfiguration();
-//        annotationAndXMLBasedConfiguration();
+//        annotationBasedConfiguration();
+        annotationAndXMLBasedConfiguration();
     }
 
     private static void annotationBasedConfiguration() {
@@ -47,9 +47,6 @@ public class MySpringApp {
         System.out.println(lineSegment.toString());
 
         System.out.println("Retrieved message is: " + applicationContext.getMessage("circle.msg", new Object[]{12, 23}, Locale.getDefault()));
-        
-        
-        annotationAndXMLBasedConfiguration();
     }
 
     //uses spring.xml file for xml configuration
@@ -67,6 +64,12 @@ public class MySpringApp {
 			LineSegment lineSegment = (LineSegment) applicationContext.getBean("lineSegment");
 			System.out.println(lineSegment.toString());
 
+			Circle circle2 = new Circle(new Point(2, 3));
+//			circle2.setCenter(point);
+			System.out.println("circle2 = " + circle2.toString());
+			
+			circle2.aopDemoMethod();
+			
 			System.out.println("Retrieved message is: " + applicationContext.getMessage("message", null, Locale.getDefault()));
 		}
     }
